@@ -1,0 +1,108 @@
+
+#download_app {
+    clip-path: polygon(0 0, 0 100%, 75% 100%, 100% 0);
+    /*clip-path: polygon(1% 0, 0 100%, 100% 0);*/
+}
+
+#download_app {
+    color: #ffffff;
+}
+
+input:focus {
+    /*outline: none !important;*/
+    /*border: none !important;*/
+    box-shadow: none !important;
+}
+
+@media (max-width: 1023px) {
+
+    #download_app {
+        clip-path: none;
+    }
+}
+
+#home_tabs .slick-track {
+    margin: 0 !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+}
+
+#home_tabs .slick-slide {
+    margin: 0 10px;
+}
+
+
+#home_tabs .slick-list {
+    overflow: inherit !important;
+}
+
+
+
+#single_ad .slick-list {
+    overflow: hidden !important;
+}
+
+
+#single_store .slick-slide {
+    /*margin: 0 10px;*/
+}
+
+#footer__dark, #banner__dark {
+    background-image: url("../images/Rectangle 2018.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#footer__bg {
+    background-image: url("../images/Image 19.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.custom-select {
+    position: relative;
+    width: 100%;
+}
+
+
+textarea {
+    resize: none;
+}
+
+
+#front {
+    background-image: url("../images/a11.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#back {
+    background-image: url("../images/a.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#dashed_bg {
+    background-image: url("../images/dashed_line.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 270px;
+}
+
+.canceled-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #5e5c5c;
+    transform: translate(-40%, -50%) rotate(-45deg);
+}
+
+#carousel .rounded-lg {
+    border-radius: 0;
+}

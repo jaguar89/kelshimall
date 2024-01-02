@@ -1,0 +1,6 @@
+{
+  "play_store" : "https://play.google.com/store/apps/details?id=com.keshi_mall.klshi_mall&pcampaignid=web_share",
+  "store_default_cover": "https://api.kelshimall.com:7738/StorageA/DefaultCover.png",
+  "logo" : "https://api.kelshimall.com:7738/StorageA/AppLogo.png",
+  "direct_apk" : "https://api.kelshimall.com:7738/apiV2/downloadApp"
+}

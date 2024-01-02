@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="86.66" height="86.66" viewBox="0 0 86.66 86.66">
+  <g id="Icon_feather-alert-circle" data-name="Icon feather-alert-circle" transform="translate(1.5 1.5)">
+    <path id="Path_561" data-name="Path 561" d="M86.66,44.83A41.83,41.83,0,1,1,44.83,3,41.83,41.83,0,0,1,86.66,44.83Z" transform="translate(-3 -3)" fill="none" stroke="rgba(209,8,8,0.89)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <g id="Group_6512" data-name="Group 6512">
+      <circle id="Ellipse_193" data-name="Ellipse 193" cx="3.5" cy="3.5" r="3.5" transform="translate(38.457 52.056)" fill="#d62424"/>
+      <rect id="Rectangle_2048" data-name="Rectangle 2048" width="5" height="29" rx="2.5" transform="translate(39.457 19.056)" fill="#d62424"/>
+    </g>
+  </g>
+</svg>
