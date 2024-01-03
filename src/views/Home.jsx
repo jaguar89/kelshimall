@@ -9,7 +9,7 @@ function Home(props) {
     const banners = homeContext.banners;
 
     function renderBanner() {
-        return <ImageSlider home={true} banners={banners} propertyName={"ImageUrl"} slide={false}  />
+        return <ImageSlider home={true} banners={banners} propertyName={"ImageUrl"} slide={true}  />
     }
 
     return (
