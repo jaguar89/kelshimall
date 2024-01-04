@@ -20,7 +20,7 @@ function Tabs(props) {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
-        initialSlide: 0,
+        initialSlide: 1,
         rtl: true,
         responsive: [
             {
@@ -68,8 +68,8 @@ function Tabs(props) {
                     })
                 }
             </ul>
-            <div id="tabs_content">
-                {selectedTab === 0 && <div className="pt-14 w-full overflow-hidden">
+            <div dir={'rtl'}  id="tabs_content">
+                {selectedTab === 0 && <div  className="pt-14 w-full overflow-hidden">
                     <Slider {...settings}>
                         {
                             latestAds.map((item, index) => {
