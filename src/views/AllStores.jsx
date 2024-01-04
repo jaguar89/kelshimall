@@ -26,12 +26,14 @@ function AllStores(props) {
 
     return (
         <>
-            <div dir={'rtl'} className="p-10 pr-12 flex flex-col gap-10">
+            <div dir={'rtl'} className="py-4 lg:p-10 lg:pr-12 flex flex-col gap-10">
 
-                <div className="flex flex-row items-center gap-2">
-                    <Link to={'/'} className="text-blue-900 font-bold">الرئيسية</Link> &raquo;
-                    <span className="text-blue-900 font-bold">كل المتاجر</span>
-                    <div className="flex flex-col gap-2 relative w-1/3 mr-8">
+                <div className="flex flex-col lg:flex-row items-start lg:items-center gap-2">
+                    <div className="p-2 lg:p-0">
+                        <Link to={'/'} className="text-blue-900 font-bold">الرئيسية</Link> &raquo;
+                        <span className="text-blue-900 font-bold">كل المتاجر</span>
+                    </div>
+                    <div className="flex flex-col gap-2 relative w-2/3 lg:w-1/3 mr-8">
                         <select
                             name="type"
                             className="border border-gray-300 focus:outline-none rounded-md p-2 bg-secondary "

@@ -12,9 +12,9 @@ function FeaturedAds(props) {
 
     return (
         <>
-            <div dir={'rtl'} className="p-10 pr-12 flex flex-col gap-10">
+            <div dir={'rtl'} className="py-4 lg:p-10 lg:pr-12 flex flex-col gap-10">
 
-                <div className="flex flex-row items-center gap-2">
+                <div className="flex flex-row items-center gap-2 p-2 lg:p-0">
                     <Link to={'/'} className="text-blue-900 font-bold">الرئيسية</Link> &raquo;
                     <span className="text-blue-900 font-bold"> الإعلانات المميزة</span>
                 </div>

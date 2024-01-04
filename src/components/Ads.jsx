@@ -40,7 +40,7 @@ function Ads({filterParameters, page, onSetPage}) {
                     info !== "" ? info :  <Spinner aria-label="Default status example"/>
                 }
             </div> :
-            <div className="p-10  flex flex-col gap-10">
+            <div className="lg:p-10  flex flex-col gap-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 p-1 ">
 
                     {

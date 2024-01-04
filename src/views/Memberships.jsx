@@ -31,14 +31,14 @@ function Memberships(props) {
         const membership = memberships[index];
 
         return (
-            <div className="flex flex-col w-full items-center justify-center gap-2">
+            <div className="flex flex-col w-full items-center justify-center gap-2 pt-4">
                 {
                     membership['features'].map((item, index) => (
                         <div key={index}
                              className="flex flex-row w-2/3 border-b border-gray-300 py-4 items-center justify-between">
                             <div className="flex flex-col gap-2">
                                 <h3 className="text-primary text-md font-bold">{item.title}</h3>
-                                <p className="text-gray-600 ">{item.desc}</p>
+                                <p className="text-gray-600 text-xs lg:text-lg">{item.desc}</p>
                             </div>
                             <span className="text-btn_primary text-xl font-bold">{item.value}</span>
                             {
@@ -91,8 +91,8 @@ function Memberships(props) {
                 <div id="back" className="w-full h-auto">
 
 
-                    <div id="front" className="flex flex-col w-full items-center p-10">
-                        <h1 className="text-3xl font-bold text-btn_primary w-full text-right">اشتراكات تناسب الجميع على
+                    <div id="front" className="flex flex-col w-full items-center lg:p-10">
+                        <h1 className="text-3xl p-2 font-bold text-btn_primary w-full text-right">اشتراكات تناسب الجميع على
                             كلشي
                             مول</h1>
 
@@ -108,7 +108,7 @@ function Memberships(props) {
                                     items.map((item, index) => {
                                         return (
                                             <li key={index} onClick={() => setSelectedTab(index)}
-                                                className={`inline-block p-4 px-6  border-t border-b border-gray-400  cursor-pointer 
+                                                className={`inline-block p-4 lg:px-6  border-t border-b border-gray-400  cursor-pointer 
                                         ${index === 0 ? 'rounded-tr-md rounded-br-md border' : ''}
                                         ${index === 1 ? 'border-l' : ''}
                                         ${index === items.length - 1 ? 'rounded-tl-md rounded-bl-md  border' : ''}
