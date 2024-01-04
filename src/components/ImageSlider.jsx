@@ -9,7 +9,7 @@ function ImageSlider({addItem = null, banners, propertyName = null, slide = fals
             <div
                 // className="h-56 sm:h-64 xl:h-80 2xl:h-96"
                 dir={'ltr'}
-                className={`h-56 sm:h-64 ${home ? 'xl:h-screen' : 'xl:h-96'}`}
+                className={`h-48 sm:h-64 md:h-72 lg:80 ${home ? 'xl:h-screen' : 'xl:h-96'}`}
                 id="carousel"
             >
 

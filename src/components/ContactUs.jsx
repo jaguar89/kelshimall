@@ -14,7 +14,8 @@ function ContactUs(props) {
                 </div>
                 <div className="flex flex-row items-center gap-1 gap-4 px-6">
                     <span>{homeContext.contactWhatsapp}</span>
-                    <img src="../../images/whatsappIcon.svg" />
+                    {/*<img src="../../images/whatsappIcon.svg" />*/}
+                    <img className="w-4 h-auto" src="../images/Group 56-black.svg" />
                 </div>
             </div>
         </div>

@@ -23,7 +23,7 @@ function AdCard({adObject}) {
 
     return (
         <div dir="rtl"
-             className="w-full h-72 relative border-none flex flex-row">
+             className="w-full h-64 md:h-72 relative border-none flex flex-row">
             {
                 adObject.IsNegotiable && <span
                     className="bg-primary text-white px-4 py-1  text-sm absolute top-0 -translate-y-[100%] right-0 z-10  rounded-tl-xl rounded-tr-xl ">منتفاوض</span>
