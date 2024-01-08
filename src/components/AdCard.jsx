@@ -23,7 +23,7 @@ function AdCard({adObject}) {
 
     return (
         <div dir="rtl"
-             className="w-full h-64 md:h-72 relative border-none flex flex-row">
+             className="w-full h-72  relative border-none flex flex-row">
             {
                 adObject.IsNegotiable && <span
                     className="bg-primary text-white px-4 py-1  text-sm absolute top-0 -translate-y-[100%] right-0 z-10  rounded-tl-xl rounded-tr-xl ">منتفاوض</span>
@@ -38,7 +38,7 @@ function AdCard({adObject}) {
             <img className=" w-1/2 h-auto object-cover  " src={adObject.ImageUrl} alt=""/>
             {/*</Link>*/}
             <div
-                className="w-full flex flex-col gap-4 p-4 h-1/2  h-auto pt-8 justify-evenly text-right  flex-1"
+                className="w-full flex flex-col gap-4 p-4 h-auto pt-8 justify-evenly text-right  flex-1"
             >
                 <Link to={`/ads/${adObject.PostId}`}><h2 className="font-bold text-md">{truncatedTitle}</h2></Link>
 
@@ -50,10 +50,10 @@ function AdCard({adObject}) {
                                                                                       alt=""/>{formatDate(adObject.PublicationDate)}</span>
                 {
                     adObject.storeInfo.DisplayPrivateLogo &&
-                    <Link to={`/stores/${adObject.storeInfo.Id}`} className="flex flex-row items-center gap-4">
-                        <img className="w-12 h-12 object-cover rounded-full"
+                    <Link to={`/stores/${adObject.storeInfo.Id}`} className="flex flex-row items-center gap-1 md:gap-4">
+                        <img className="w-12 h-auto object-cover rounded-full"
                              src={adObject.storeInfo.ProfilePicture} alt=""/>
-                        <span className="text-sm font-bold ">{adObject.storeInfo.Title}</span>
+                        <span className="text-xs md:text-sm font-bold">{adObject.storeInfo.Title}</span>
                     </Link>
                 }
             </div>

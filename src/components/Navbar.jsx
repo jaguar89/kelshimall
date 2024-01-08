@@ -15,7 +15,7 @@ function Navbar(props) {
                 <div className="flex flex-row-reverse items-center justify-between w-full px-2">
                     <Link to={'/'} id="logo" className="md:pr-4">
                         {/*<img src="../images/logo-06.svg" alt=""/>*/}
-                        <img className="w-32 h-32 lg:w-40 lg:h-auto" src={config.logo} alt=""/>
+                        <img className="w-32 lg:w-40 h-auto" src={config.logo} alt=""/>
                     </Link>
                     <div id="search"
                          className="flex flex-row-reverse gap-2 bg-white rounded-md px-4 items-center flex-1 justify-center">
