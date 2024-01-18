@@ -39,6 +39,22 @@ input:focus {
 
 
 
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #273E7A;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    animation: spin 1s linear infinite;
+}
+
 #single_ad .slick-list {
     overflow: hidden !important;
 }

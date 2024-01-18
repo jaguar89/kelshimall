@@ -160,6 +160,24 @@ export const sendComplaint = async (filterParameters) => {
     }
 }
 
+export const fetchPolicyExternal = async () => {
+    try {
+        const response = await axiosClient.get(API_URL + 'getpolicy?review=true');
+        const data = response.data;
+        return data;
+        // if (data.isCompressed === true) {
+        //     const compressedData = data.compressedData;
+        //     const decompressedData = convertFromBase64AndDecompress(compressedData);
+        //     const jObj = JSON.parse(decompressedData);
+        //     console.log(jObj)
+        //     return jObj;
+        // } else {
+        //     console.log('Not Compressed Data:', data);
+        // }
+    } catch (error) {
+        // console.error('Error -from API Service- /fetchPolicyExternal/ : ' + error);
+    }
+}
 
 export const increasePostView = async (id) => {
     try {

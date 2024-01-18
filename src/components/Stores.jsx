@@ -3,7 +3,7 @@ import {fetchAdsByFilterParameter, fetchStoresByFilterParameter} from "../apiSer
 import AdItem from "./AdItem.jsx";
 import {Link} from "react-router-dom";
 import StoreItem from "./StoreItem.jsx";
-import {Spinner} from "flowbite-react";
+import Spinner from "./Spinner.jsx";
 
 function Stores({filterParameters, page, onSetPage}) {
     const [allStores, setAllStores] = useState([]);
@@ -36,7 +36,7 @@ function Stores({filterParameters, page, onSetPage}) {
         allStores.length === 0 ?
             <div dir={'rtl'} className="mx-auto text-center p-4">
                 {
-                    info !== "" ? info :  <Spinner aria-label="Default status example"/>
+                    info !== "" ? info :  <Spinner/>
                 }
 
             </div> :

@@ -12,10 +12,10 @@ function ContactUs(props) {
                     <span>{homeContext.contactNumber}</span>
                     <img src="../../images/phoneIcon.svg" />
                 </div>
-                <div className="flex flex-row items-center gap-1 gap-4 px-6">
+                <div className="flex flex-row items-center  gap-4 px-6">
                     <span>{homeContext.contactWhatsapp}</span>
                     {/*<img src="../../images/whatsappIcon.svg" />*/}
-                    <img className="w-4 h-auto" src="../images/Group 56-black.svg" />
+                    <img className="w-4 h-auto" src="../images/Group 56-primary.svg" />
                 </div>
             </div>
         </div>

@@ -5,7 +5,6 @@ function BannedAds(props) {
     return (
         <>
             <div dir={'rtl'} className="flex flex-col gap-0 ">
-
                 <div className="px-10 flex flex-col space-y-8">
                     <span className="pt-10 text-md md:text-xl text-blue-900 font-bold">&laquo;الإعلانات الممنوعة&raquo;</span>
                     <h1 className="text-2xl md:text-3xl font-bold text-btn_primary ">ما هي الإعلانات الممنوعة على كلشي مول ؟</h1>

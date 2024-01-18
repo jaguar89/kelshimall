@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {useCategoryContext, useHomeContext} from "../contexts/ContextProvider.jsx";
 import {Link, useNavigate, useParams} from "react-router-dom";
-import {Spinner} from "flowbite-react";
+import Spinner from "./Spinner.jsx";
 
 function Categories(props) {
     const homeContext = useHomeContext();
@@ -10,7 +10,7 @@ function Categories(props) {
 
     return (
         categories.length === 0 ?
-            <div dir={'rtl'} className="mx-auto text-center p-4"><Spinner aria-label="Default status example"/></div> :
+            <Spinner /> :
             <section className="w-full">
                 <nav dir={'rtl'}
                      className="flex flex-wrap gap-4 items-center justify-evenly py-2 px-4"

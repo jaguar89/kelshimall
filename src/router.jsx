@@ -18,6 +18,9 @@ import LatestAds from "./views/LatestAds.jsx";
 import FeaturedAds from "./views/FeaturedAds.jsx";
 import Search from "./views/Search.jsx";
 import AllStores from "./views/AllStores.jsx";
+import ContactUs from "./views/external/ContactUs.jsx";
+import GuestLayoutExternal from "./layouts/GuestLayoutExternal";
+import Policy from "./views/external/Policy.jsx";
 
 
 const router = createBrowserRouter([
@@ -103,6 +106,20 @@ const router = createBrowserRouter([
             }
         ]
     } ,
+    {
+        path: '/',
+        element: <GuestLayoutExternal/>,
+        children: [
+            {
+                path: '/contact',
+                element: <ContactUs/>
+            },
+            {
+                path: '/policy',
+                element: <Policy/>
+            },
+        ]
+    },
     {
         path:'/not-found',
         element : <NotFound/>

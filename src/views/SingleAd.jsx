@@ -1,13 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {Link, useNavigate, useParams} from "react-router-dom";
-
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {fetchAdsByFilterParameter} from "../apiService.js";
 import ContactUs from "../components/ContactUs.jsx";
-import {Carousel, Spinner} from "flowbite-react";
 import ImageSlider from "../components/ImageSlider.jsx";
+import Spinner from "../components/Spinner.jsx";
 
 
 function SingleAd(props) {
@@ -64,7 +62,7 @@ function SingleAd(props) {
     return (
 
        !currentAd || Object.keys(currentAd).length === 0 ? (
-            <div dir={'rtl'} className="mx-auto text-center p-4"><Spinner aria-label="Default status example"/></div>
+            <Spinner />
         ) : (
             <>
                 <div id="single_ad" dir={"rtl"} className="relative flex flex-col w-full pb-10">

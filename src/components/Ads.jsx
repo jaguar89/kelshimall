@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react';
 import {fetchAdsByFilterParameter} from "../apiService.js";
 import AdItem from "./AdItem.jsx";
 import {Link, useNavigate} from "react-router-dom";
-import {Spinner} from "flowbite-react";
 import AdCard from "./AdCard.jsx";
+import Spinner from "./Spinner.jsx";
 
 function Ads({filterParameters, page, onSetPage}) {
     const [allAds, setAllAds] = useState([]);
@@ -37,7 +37,7 @@ function Ads({filterParameters, page, onSetPage}) {
         allAds.length === 0 ?
             <div dir={'rtl'} className="mx-auto text-center p-4">
                 {
-                    info !== "" ? info :  <Spinner aria-label="Default status example"/>
+                    info !== "" ? info :  <Spinner/>
                 }
             </div> :
             <div className="lg:p-10  flex flex-col gap-10">

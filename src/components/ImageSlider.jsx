@@ -1,11 +1,11 @@
 import React from 'react';
 import {Carousel} from "flowbite-react";
-import {Spinner} from 'flowbite-react';
+import Spinner from "./Spinner.jsx";
 
 function ImageSlider({addItem = null, banners, propertyName = null, slide = false, indicators = true, home = false}) {
     return (
         banners.length === 0 ?
-            <div dir={'rtl'} className="mx-auto text-center p-4"><Spinner aria-label="Default status example"/></div> :
+            <Spinner/>:
             <div
                 // className="h-56 sm:h-64 xl:h-80 2xl:h-96"
                 dir={'ltr'}

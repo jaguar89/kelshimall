@@ -42,7 +42,6 @@ function Complaint(props) {
     return (
         <>
             <div dir={'rtl'} className="p-10 pr-28 flex flex-col gap-10">
-
                 <div className="flex flex-row items-center gap-2">
                     <Link to={'/'} className="text-blue-900 font-bold">الرئيسية</Link> &raquo;
                     <span className="text-blue-900 font-bold">بلغ عن اساءة</span>

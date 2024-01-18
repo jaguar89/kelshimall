@@ -7,8 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Ads from "../components/Ads.jsx";
 import ContactUs from "../components/ContactUs.jsx";
 import ImageSlider from "../components/ImageSlider.jsx";
-import {Spinner} from "flowbite-react";
 import config from '../config.json';
+import Spinner from "../components/Spinner.jsx";
 
 function SingleStore(props) {
     const homeContext = useHomeContext();
@@ -64,7 +64,7 @@ function SingleStore(props) {
 
     return (
         !currentStore || Object.keys(currentStore).length === 0 ?
-            <div dir={'rtl'} className="mx-auto text-center p-4"><Spinner aria-label="Default status example"/></div>
+            <Spinner/>
             :
             <>
                 <div id="single_ad" dir={"rtl"} className="flex flex-col w-full mt-0">
@@ -96,13 +96,14 @@ function SingleStore(props) {
                             </span>
                                 <span>{currentStore.MembershipNameAr} </span>
                             </div>
-                            {currentStore.CanBeFollowed && <div className=" flex flex-col gap-6 m-0 text-white items-center p-0">
+                            {currentStore.CanBeFollowed &&
+                                <div className=" flex flex-col gap-6 m-0 text-white items-center p-0">
                             <span className="flex flex-row items-center justify-center gap-2 ">
                                 <img className="w-6 h-6" src="../../images/users.svg"/>
                                 المتابعين
                             </span>
-                                <span>{currentStore.TotalFollowers} </span>
-                            </div>}
+                                    <span>{currentStore.TotalFollowers} </span>
+                                </div>}
                             <div className=" flex flex-col gap-6 m-0 text-white items-center p-0">
                             <span className="flex flex-row items-center justify-center gap-2 ">
                                 <img className="w-6 h-6" src="../../images/map-pin.svg"/>
@@ -200,7 +201,8 @@ function SingleStore(props) {
                             </span>
                             <span>{currentStore.MembershipNameAr} </span>
                         </div>
-                        {currentStore.CanBeFollowed && <div className="flex flex-col gap-6 m-0 text-xs text-gray-900 items-center p-0">
+                        {currentStore.CanBeFollowed &&
+                            <div className="flex flex-col gap-6 m-0 text-xs text-gray-900 items-center p-0">
                             <span className="flex flex-row text-primary font-bold  items-center justify-center gap-2 ">
                                 <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="33.203"
                                      height="21.123"
@@ -212,8 +214,8 @@ function SingleStore(props) {
 
                                 المتابعين
                             </span>
-                            <span>{currentStore.TotalFollowers} </span>
-                        </div>}
+                                <span>{currentStore.TotalFollowers} </span>
+                            </div>}
                         <div className=" flex flex-col gap-6 m-0  text-xs  text-gray-900 items-center p-0">
                             <span className="flex flex-row text-primary font-bold items-center justify-center gap-2 ">
                                 <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="25.206"

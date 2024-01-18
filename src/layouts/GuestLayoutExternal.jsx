@@ -36,7 +36,6 @@ function GuestLayout(props) {
 
             {homeContext.categories.length === 0 ? <Spinner /> : <Outlet/>}
 
-            <Footer/>
         </>
     );
 }
