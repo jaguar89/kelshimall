@@ -19,6 +19,8 @@ function SingleStore(props) {
     const [showMobileNumber, setShowMobileNumber] = useState(false);
     const [page, setPage] = useState(0);
     const navigate = useNavigate();
+    const params = useParams();
+    const baseUrl = import.meta.env.VITE_BASE_URL;
 
     function renderBanner() {
         const banners = currentStore.BackGroundPictures.length === 0 ? [config.store_default_cover] : currentStore.BackGroundPictures;
@@ -26,18 +28,10 @@ function SingleStore(props) {
         return <ImageSlider banners={banners} indicators={false}/>
     }
 
-    const copyCurrentLinkToClipboard = async () => {
-        try {
-            await navigator.clipboard.writeText(window.location.href);
-            alert('URL copied to clipboard!');
-        } catch (err) {
-            console.error('Unable to copy to clipboard.', err);
-        }
-    };
-
     const copyStoreLinkToClipboard = async () => {
         try {
-            await navigator.clipboard.writeText(currentStore.StoreLink);
+            // await navigator.clipboard.writeText(currentStore.StoreLink);
+            await navigator.clipboard.writeText(baseUrl + '/' + currentStore.StoreLink);
             alert('URL copied to clipboard!');
         } catch (err) {
             console.error('Unable to copy to clipboard.', err);
@@ -45,9 +39,17 @@ function SingleStore(props) {
     };
 
     useEffect(() => {
+        const { dedicatedLink, id } = params;
+         let filterParameters = {};
+        if (id) {
+            filterParameters = {'storeId': id, 'pageSize': 1};
+        } else if (dedicatedLink) {
+            filterParameters = {"link": dedicatedLink ,   "pageSize": 1};
+        }
+
         const fetchData = async () => {
             try {
-                const data = await fetchStoresByFilterParameter({'storeId': id, 'pageSize': 1});
+                const data = await fetchStoresByFilterParameter(filterParameters);
                 // console.log('Single Store Data from api:', data);
                 if (data.length === 0)
                     navigate('/404');
@@ -118,16 +120,16 @@ function SingleStore(props) {
                             </span>
                                 <span>{currentStore.Area} </span>
                             </div>
-                            <div className="flex flex-col items-center justify-center gap-4 mr-10">
+                            <div className="flex flex-col items-center justify-center gap-2 mr-10">
                                 <button
-                                    onClick={copyCurrentLinkToClipboard}
-                                    className="flex flex-row-reverse items-center gap-2 bg-customGray2 rounded-full text-primary text-md  px-2 py-1 ">
+                                    onClick={copyStoreLinkToClipboard}
+                                    className="flex flex-row-reverse items-center gap-2 bg-customGray2 rounded-full text-primary text-md  px-3 py-2 ">
                                     <span className="text-sm ">شارك المتجر</span>
                                     <img className="w-4 h-4" src="../../images/share.svg"/>
                                 </button>
                                 <button
                                     onClick={() => setShowMobileNumber(!showMobileNumber)}
-                                    className="flex flex-row-reverse items-center gap-2 bg-customGray2 rounded-full text-primary text-md  px-2 py-1 ">
+                                    className="flex flex-row-reverse items-center gap-2 bg-customGray2 rounded-full text-primary text-md  px-3 py-2 ">
                                     <span dir={'ltr'}
                                           className="text-sm ">{showMobileNumber ? `+963-${currentStore.MobileNumber}` : 'اضغط لإظهار الرقم'}</span>
                                     <img className="w-4 h-4" src="../../images/phonIconBlack.svg"/>
@@ -164,9 +166,9 @@ function SingleStore(props) {
                             <div className=" w-full">
                                 <div
                                     className="flex flex-row  z-10 max-h-20 items-center justify-end gap-6 p-4 w-[100%]  bg-customGray  opacity-75 rounded-2xl  pr-[0rem] transform -translate-y-[50%] ">
-                                    <div className="flex flex-col items-center justify-center gap-4 mr-10">
+                                    <div className="flex flex-col items-center justify-center gap-1 mr-10">
                                         <button
-                                            onClick={copyCurrentLinkToClipboard}
+                                            onClick={copyStoreLinkToClipboard}
                                             className="flex flex-row-reverse items-center gap-2 bg-customGray2 rounded-lg text-primary text-md  px-2 py-1 ">
                                             <span className="text-xs ">شارك المتجر</span>
                                             <img className="w-4 h-4" src="../../images/share.svg"/>
@@ -251,7 +253,7 @@ function SingleStore(props) {
                             <p>{currentStore.About}</p>
                         </div>
 
-                        {currentStore.DedicatedLink && <div>
+                        <div>
                             <button
                                 onClick={copyStoreLinkToClipboard}
                                 className="flex flex-row-reverse items-center gap-2 bg-primary hover:bg-blue-800 rounded-lg text-white text-md  px-4 py-2 ">
@@ -264,7 +266,7 @@ function SingleStore(props) {
                                 </svg>
 
                             </button>
-                        </div>}
+                        </div>
 
                         {currentStore.CanExposeServices && <div className="flex flex-col gap-4 flex-wrap">
                             <h3 className="text-xl">الخدمات</h3>
@@ -279,6 +281,9 @@ function SingleStore(props) {
                                         )
                                     })
                                 }
+                            </div>
+                            <div><span
+                                className="bg-yellow-100 p-2 rounded-md inline-block mt-4">{baseUrl + '/' + currentStore.StoreLink}</span>
                             </div>
                         </div>}
 
@@ -301,8 +306,10 @@ function SingleStore(props) {
 
                     </div>
 
-                    <Ads filterParameters={{'storeId': currentStore.Id, 'pageId': page, 'pageSize': 10}} page={page}
-                         onSetPage={setPage}/>
+                    <div className="w-full py-10">
+                        <Ads filterParameters={{'storeId': currentStore.Id, 'pageId': page, 'pageSize': 10}} page={page}
+                             onSetPage={setPage}/>
+                    </div>
                 </div>
                 <ContactUs/>
             </>

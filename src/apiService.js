@@ -80,6 +80,7 @@ export const fetchStoresByFilterParameter = async (filterParameters) => {
             "parentCategoryId": null,
             "shuffleRandom": null,
             "area": null,
+            "link": null,
             "neighborhood": null,
             "maxPrice": null,
             "minPrice": null,
@@ -96,7 +97,7 @@ export const fetchStoresByFilterParameter = async (filterParameters) => {
                 options[filterParametersKey] = filterParameters[filterParametersKey];
             }
         }
-        // console.log(options)
+        // console.log(options,API_URL + 'GetStores?Lang=ar')
         const response = await axiosClient.post(API_URL + 'GetStores?Lang=ar', options);
         const data = response.data;
         if (data.isCompressed === true) {
@@ -165,15 +166,6 @@ export const fetchPolicyExternal = async () => {
         const response = await axiosClient.get(API_URL + 'getpolicy?review=true');
         const data = response.data;
         return data;
-        // if (data.isCompressed === true) {
-        //     const compressedData = data.compressedData;
-        //     const decompressedData = convertFromBase64AndDecompress(compressedData);
-        //     const jObj = JSON.parse(decompressedData);
-        //     console.log(jObj)
-        //     return jObj;
-        // } else {
-        //     console.log('Not Compressed Data:', data);
-        // }
     } catch (error) {
         // console.error('Error -from API Service- /fetchPolicyExternal/ : ' + error);
     }

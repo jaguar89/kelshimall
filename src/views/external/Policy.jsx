@@ -31,7 +31,6 @@ function Policy(props) {
                         {policyText}
                     </p>
                 </div>
-                <ContactUs/>
             </>
     );
 }

@@ -18,7 +18,7 @@ function Stores({filterParameters, page, onSetPage}) {
                 // console.log('All Store\'s  Data from api:', data);
                 if (data.length === 0) {
                     if (page > 0) onSetPage(0);
-                    else setInfo("لا يوجد معلومات.");
+                    else setInfo("لا يوجد متاجر.");
                 }
                 setAllStores(data);
             } catch (error) {

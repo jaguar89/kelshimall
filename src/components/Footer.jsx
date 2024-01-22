@@ -15,9 +15,9 @@ function Footer(props) {
                     <h1 className="text-3xl text-white font-bold text-center">حمل تطبيق كلشي مول الآن</h1>
                     <div className="flex flex-col md:flex-row items-center gap-8 sm:gap-6  ">
                         <a  href={config.play_store}
-                           className="flex flex-row items-center justify-start rounded-xl hover:bg-primaryLight px-4  py-2 lg:px-8 lg:py-4 gap-2 bg-primary ">
+                           className="flex flex-row items-center justify-start rounded-xl hover:bg-primaryLight px-4  py-3 lg:px-8 lg:py-4 gap-2 bg-primary ">
                             <span className="text-white text-sm lg:text-xl">عبر بلاي ستور</span>
-                            <img className="h-auto w-4 md:w-6" src="../images/Icon%20awesome-google-play.svg"
+                            <img className="h-auto w-5 md:w-6" src="../images/Icon%20awesome-google-play.svg"
                                  alt="Google Play"/> </a>
                         {/*<a href="#"*/}
                         {/*   className="flex flex-row items-center justify-start rounded-xl hover:bg-primaryLight px-4 py-2 lg:px-8 lg:py-4 gap-2 bg-primary">*/}
@@ -25,10 +25,10 @@ function Footer(props) {
                         {/*    <img className="h-auto w-4 md:w-6" src="../images/Icon%20awesome-apple.svg"*/}
                         {/*         alt="Apple Store"/> </a>*/}
                         <a href={config.direct_apk}
-                           className="flex flex-row items-center justify-start rounded-xl hover:bg-primaryLight px-4 py-2 lg:px-8 lg:py-4 gap-2 bg-primary">
+                           className="flex flex-row items-center justify-start rounded-xl hover:bg-primaryLight px-5 py-3 lg:px-8 lg:py-4 gap-2 bg-primary">
                             <span className="text-white text-sm lg:text-xl"> APK تحميل</span>
                             <svg   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
-                                   stroke="currentColor" className="w-6 h-auto text-white">
+                                   stroke="currentColor" className="w-auto h-6 text-white">
                                 <path strokeLinecap="round" strokeLinejoin="round"
                                       d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"/>
                             </svg>

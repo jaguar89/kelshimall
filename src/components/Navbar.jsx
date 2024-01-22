@@ -15,7 +15,7 @@ function Navbar(props) {
                 <div className="flex flex-row-reverse items-center justify-between w-full px-2">
                     <Link to={'/'} id="logo" className="md:pr-4">
                         {/*<img src="../images/logo-06.svg" alt=""/>*/}
-                        <img className="w-32 lg:w-40 h-auto" src={config.logo} alt=""/>
+                        <img className="w-32 lg:w-40 h-auto" src={config.logo} alt="Logo"/>
                     </Link>
                     <div id="search"
                          className="flex flex-row-reverse gap-2 bg-white rounded-md px-4 items-center flex-1 justify-center">
@@ -36,8 +36,8 @@ function Navbar(props) {
                     <span className="block text-white mb-2 ml-0 lg:ml-6">حمل تطبيق كلشي مول الآن</span>
                     <div className="flex flex-row items-center gap-4 md:gap-6 lg:gap-1 xl:gap-2">
                         <a href={config.play_store}
-                           className="flex flex-row items-center hover:bg-btn_primaryLight rounded-md py-1 sm:py-2 px-2 sm:px-4 lg:p-1 xl:py-2 xl:px-4 gap-2 bg-btn_primary text-white text-xs sm:text-sm">عبر
-                            بلاي ستور <img className="h-auto w-4" src="../images/Icon%20awesome-google-play.svg"
+                           className="flex flex-row items-center hover:bg-btn_primaryLight rounded-md py-2 px-3 sm:px-4 lg:p-1 xl:py-2 xl:px-4 gap-2 bg-btn_primary text-white text-xs sm:text-sm">عبر
+                            بلاي ستور <img className="h-5 w-5" src="../images/Icon%20awesome-google-play.svg"
                                            alt="Google Play"/> </a>
 
                         {/*<a href="#"*/}
@@ -45,10 +45,10 @@ function Navbar(props) {
                         {/*    آبل ستور <img className="h-auto w-4" src="../images/Icon%20awesome-apple.svg"*/}
                         {/*                  alt="Apple Store"/> </a>*/}
                         <a href={config.direct_apk}
-                           className="flex flex-row items-center hover:bg-btn_primaryLight rounded-md py-1 sm:py-2 px-2 sm:px-4 lg:p-1 xl:py-2 xl:px-4 gap-2 bg-btn_primary text-white text-xs sm:text-sm">
+                           className="flex flex-row items-center hover:bg-btn_primaryLight rounded-md py-2 px-3 sm:px-4 lg:p-1 xl:py-2 xl:px-4 gap-2 bg-btn_primary text-white text-xs sm:text-sm">
                              APK تحميل
                             <svg   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
-                                 stroke="currentColor" className="w-5 h-auto">
+                                 stroke="currentColor" className="h-5 w-5">
                                 <path strokeLinecap="round" strokeLinejoin="round"
                                       d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"/>
                             </svg>

@@ -19,7 +19,7 @@ function Ads({filterParameters, page, onSetPage}) {
                 // console.log('All Store\'s Ads Data from api:', data);
                 if (data.length === 0) {
                     if (page > 0) onSetPage(0);
-                    else setInfo("لا يوجد معلومات.");
+                    else setInfo("لا يوجد إعلانات.");
                 }
                 setAllAds(data);
             } catch (error) {
@@ -55,7 +55,7 @@ function Ads({filterParameters, page, onSetPage}) {
                     }
 
                 </div>
-                <div className="flex flex-row gap-2 items-center justify-between">
+                <div className="flex flex-row gap-2 items-center justify-between px-4">
                     <button onClick={() => {
                         window.scrollTo(0, 0);
                         onSetPage(page - 1 < 0 ? 0 : page - 1);

@@ -30,12 +30,12 @@ function GuestLayout(props) {
 
     return (
         <>
-            <Navbar/>
+            {/*<Navbar/>*/}
 
-            {homeContext.categories.length > 0 && <Categories/>}
+            {/*{homeContext.categories.length > 0 && <Categories/>}*/}
 
-            {homeContext.categories.length === 0 ? <Spinner /> : <Outlet/>}
-
+            {/*{homeContext.categories.length === 0 ? <Spinner /> : <Outlet/>}*/}
+            <Outlet/>
         </>
     );
 }

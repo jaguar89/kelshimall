@@ -33,6 +33,10 @@ const router = createBrowserRouter([
                 element: <Home/>
             },
             {
+                path: '/:dedicatedLink',
+                element: <SingleStore/>
+            },
+            {
                 path: '/ads/:id',
                 element: <SingleAd/>
             },
