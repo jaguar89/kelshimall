@@ -110,20 +110,20 @@ const router = createBrowserRouter([
             }
         ]
     } ,
-    {
-        path: '/',
-        element: <GuestLayoutExternal/>,
-        children: [
-            {
-                path: '/contact',
-                element: <ContactUs/>
-            },
-            {
-                path: '/policy',
-                element: <Policy/>
-            },
-        ]
-    },
+    // {
+    //     path: '/',
+    //     element: <GuestLayoutExternal/>,
+    //     children: [
+    //         {
+    //             path: '/contact',
+    //             element: <ContactUs/>
+    //         },
+    //         {
+    //             path: '/policy',
+    //             element: <Policy/>
+    //         },
+    //     ]
+    // },
     {
         path:'/not-found',
         element : <NotFound/>

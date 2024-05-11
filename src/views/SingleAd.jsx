@@ -164,29 +164,29 @@ function SingleAd(props) {
                                 <Link to={`/stores/${currentAd.storeInfo?.Id}`}>
                                     {
                                         currentAd.storeInfo?.ProfilePicture === "" ? (
-                                            <img className="w-36 h-36"
+                                            <img className="w-24 h-24 md:w-36 md:h-36"
                                                  src="../images/logo-06.svg" alt=""/>
                                         ) : (
-                                            <img className="w-36 h-36 object-cover rounded-full"
+                                            <img className="w-24 h-24 md:w-36 md:h-36 object-cover rounded-full"
                                                  src={currentAd.storeInfo?.ProfilePicture} alt=""/>
                                         )
                                     }
                                 </Link>
                                 <div className="flex flex-col items-center justify-center">
                                     <Link to={`/stores/${currentAd.storeInfo?.Id}`}>
-                                        <span className="font-bold text-md">{currentAd.storeInfo?.Title}</span>
+                                        <span className="font-bold text-xs md:text-md">{currentAd.storeInfo?.Title}</span>
                                     </Link>
                                     {
                                         currentAd.storeInfo?.StoreCategory?.map((cat, index) => (
-                                            <span key={index}>{cat.NameAr}</span>
+                                            <span key={index} className="text-xs md:text-md">{cat.NameAr}</span>
                                         ))
                                     }
                                 </div>
                                 <span
-                                    className="flex flex-row-reverse items-center  gap-2 bg-white rounded-md text-primary text-md border border-[#273e7a] px-1 md:px-2 py-2 ">
+                                    className="flex flex-row-reverse items-center  gap-2 bg-white rounded-md text-primary text-xs md:text-md border border-[#273e7a] p-1 md:p-2 ">
                                  0{currentAd.storeInfo?.MobileNumber}
                                     <svg xmlns="http://www.w3.org/2000/svg" width="26.073" height="26.074"
-                                         viewBox="0 0 26.073 26.074" className="w-4 h-4">
+                                         viewBox="0 0 26.073 26.074" className="w-3 md:w-4 h-3 md:h-4">
                                     <g id="Group_6566" data-name="Group 6566" transform="translate(-356.527 -938.962)">
                                         <path id="Icon_awesome-phone-alt" data-name="Icon awesome-phone-alt"
                                               d="M23.365,17,18.1,14.741a1.127,1.127,0,0,0-1.315.324l-2.33,2.847A17.412,17.412,0,0,1,6.135,9.588l2.847-2.33a1.125,1.125,0,0,0,.324-1.315L7.051.682A1.135,1.135,0,0,0,5.759.029L.874,1.156A1.127,1.127,0,0,0,0,2.255a21.794,21.794,0,0,0,21.8,21.8,1.127,1.127,0,0,0,1.1-.874l1.127-4.885A1.141,1.141,0,0,0,23.365,17Z"
