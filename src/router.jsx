@@ -1,26 +1,27 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
-import GuestLayout from "./layouts/GuestLayout.jsx";
 import NotFound from "./views/NotFound.jsx";
+import ContactUs from "./views/external/ContactUs.jsx";
+import GuestLayoutExternal from "./layouts/GuestLayoutExternal";
+import Policy from "./views/external/Policy.jsx";
+import UnderConstruction from "./views/external/UnderConstruction.jsx";
+import GuestLayout from "./layouts/GuestLayout.jsx";
 import Home from "./views/Home.jsx";
-import SingleAd from "./views/SingleAd.jsx";
 import SingleStore from "./views/SingleStore.jsx";
-import Complaint from "./views/Complaint.jsx";
+import SingleAd from "./views/SingleAd.jsx";
+import AllStores from "./views/AllStores.jsx";
+import SubCategories from "./views/SubCategories.jsx";
+import LatestAds from "./views/LatestAds.jsx";
+import FeaturedAds from "./views/FeaturedAds.jsx";
+import Search from "./views/Search.jsx";
 import TermsOfUse from "./views/TermsOfUse.jsx";
-import Services from "./views/Services.jsx";
 import Memberships from "./views/Memberships.jsx";
 import PaidServices from "./views/PaidServices.jsx";
 import AboutKelshiMall from "./views/AboutKelshiMall.jsx";
 import BannedAds from "./views/BannedAds.jsx";
 import SafetyRules from "./views/SafetyRules.jsx";
 import SellerTips from "./views/SellerTips.jsx";
-import SubCategories from "./views/SubCategories.jsx";
-import LatestAds from "./views/LatestAds.jsx";
-import FeaturedAds from "./views/FeaturedAds.jsx";
-import Search from "./views/Search.jsx";
-import AllStores from "./views/AllStores.jsx";
-import ContactUs from "./views/external/ContactUs.jsx";
-import GuestLayoutExternal from "./layouts/GuestLayoutExternal";
-import Policy from "./views/external/Policy.jsx";
+import Services from "./views/Services.jsx";
+import Complaint from "./views/Complaint.jsx";
 
 
 const router = createBrowserRouter([
@@ -115,6 +116,10 @@ const router = createBrowserRouter([
     //     element: <GuestLayoutExternal/>,
     //     children: [
     //         {
+    //             path: '/',
+    //             element: <UnderConstruction/>
+    //         },
+    //         {
     //             path: '/contact',
     //             element: <ContactUs/>
     //         },
@@ -122,11 +127,15 @@ const router = createBrowserRouter([
     //             path: '/policy',
     //             element: <Policy/>
     //         },
+    //         {
+    //             path: '*',
+    //             element: <Navigate to={'/not-found'}/>
+    //         }
     //     ]
     // },
     {
-        path:'/not-found',
-        element : <NotFound/>
+        path: '/not-found',
+        element: <NotFound/>
     }
 ]);
 
