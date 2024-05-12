@@ -182,20 +182,18 @@ function SingleAd(props) {
                                         ))
                                     }
                                 </div>
-                                <span
-                                    className="flex flex-row-reverse items-center  gap-2 bg-white rounded-md text-primary text-xs md:text-md border border-[#273e7a] p-1 md:p-2 ">
-                                 0{currentAd.storeInfo?.MobileNumber}
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="26.073" height="26.074"
-                                         viewBox="0 0 26.073 26.074" className="w-3 md:w-4 h-3 md:h-4">
-                                    <g id="Group_6566" data-name="Group 6566" transform="translate(-356.527 -938.962)">
-                                        <path id="Icon_awesome-phone-alt" data-name="Icon awesome-phone-alt"
-                                              d="M23.365,17,18.1,14.741a1.127,1.127,0,0,0-1.315.324l-2.33,2.847A17.412,17.412,0,0,1,6.135,9.588l2.847-2.33a1.125,1.125,0,0,0,.324-1.315L7.051.682A1.135,1.135,0,0,0,5.759.029L.874,1.156A1.127,1.127,0,0,0,0,2.255a21.794,21.794,0,0,0,21.8,21.8,1.127,1.127,0,0,0,1.1-.874l1.127-4.885A1.141,1.141,0,0,0,23.365,17Z"
-                                              transform="translate(357.527 939.984)" fill="none" stroke="#273e7a"
-                                              strokeWidth="2"/>
-                                    </g>
-                                </svg>
-
-                            </span>
+                                <a href={`tel:0${currentAd.storeInfo?.MobileNumber}`}
+                                   className="flex flex-row-reverse items-center gap-2 bg-white rounded-md text-primary text-xs md:text-md border border-[#273e7a] p-1 md:p-2">
+                                    0{currentAd.storeInfo?.MobileNumber}
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26.073" height="26.074" viewBox="0 0 26.073 26.074"
+                                         className="w-3 md:w-4 h-3 md:h-4">
+                                        <g id="Group_6566" data-name="Group 6566" transform="translate(-356.527 -938.962)">
+                                            <path id="Icon_awesome-phone-alt" data-name="Icon awesome-phone-alt"
+                                                  d="M23.365,17,18.1,14.741a1.127,1.127,0,0,0-1.315.324l-2.33,2.847A17.412,17.412,0,0,1,6.135,9.588l2.847-2.33a1.125,1.125,0,0,0,.324-1.315L7.051.682A1.135,1.135,0,0,0,5.759.029L.874,1.156A1.127,1.127,0,0,0,0,2.255a21.794,21.794,0,0,0,21.8,21.8,1.127,1.127,0,0,0,1.1-.874l1.127-4.885A1.141,1.141,0,0,0,23.365,17Z"
+                                                  transform="translate(357.527 939.984)" fill="none" stroke="#273e7a" strokeWidth="2"/>
+                                        </g>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                         <div className="p-2 pt-10 md:p-10 flex flex-col gap-4 shadow-md flex-1 justify-between">
