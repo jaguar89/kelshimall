@@ -49,8 +49,7 @@ function Footer(props) {
                 <div className="flex flex-col md:flex-row items-center justify-around text-white gap-10  border-b border-gray-400 py-8">
                     <div className="flex flex-col items-center gap-4">
                         <img className="w-6 h-auto" src="../images/Group 56.svg" />
-                        <a href="tel:{homeContext.contactWhatsapp}"
-                           className="inline-block text-center">{homeContext.contactWhatsapp}</a>
+                        <a href={`tel:${homeContext.contactWhatsapp}`} className="inline-block text-center">{homeContext.contactWhatsapp}</a>
                     </div>
                     <div className="flex flex-col items-center gap-4">
                         <img className="w-8 h-auto" src="../images/Group 57.svg" />
